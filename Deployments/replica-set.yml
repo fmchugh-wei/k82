@@ -1,0 +1,15 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: fredapp
+  labels:
+    app: test
+    type: new-app
+spec:
+  template:
+    spec:
+      containers:
+        -
+        image: busybox
+
+  selector:
