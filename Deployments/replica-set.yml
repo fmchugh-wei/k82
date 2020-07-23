@@ -6,10 +6,18 @@ metadata:
     app: test
     type: new-app
 spec:
+  replicas: 4
   template:
+    metadata:
+      tier: frontend
     spec:
       containers:
         -
+
+          
         image: busybox
 
+
   selector:
+    matchLabels:
+      tier: frontend

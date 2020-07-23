@@ -1,13 +1,13 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: httpd-frontend
+  name: blue
   labels:
     app: lab
     tier: frontend
 spec:
 
-  replicas: 3
+  replicas: 6
   selector:
     matchLabels:
       tier: frontend
@@ -17,5 +17,8 @@ spec:
         tier: frontend
     spec:
       containers:
-      - name: alpine
-        image: httpd:2.4-alpine
+      - name: blue
+        image: nginx
+        resources:
+          requests:
+            memory: "1G"
