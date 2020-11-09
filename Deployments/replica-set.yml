@@ -9,13 +9,14 @@ spec:
   replicas: 4
   template:
     metadata:
-      tier: frontend
+      labels:
+        tier:  frontend
+
     spec:
       containers:
-        -
 
-          
-        image: busybox
+       - image: busybox
+         name: fredapp
 
 
   selector:
