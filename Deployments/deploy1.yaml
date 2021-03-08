@@ -17,5 +17,5 @@ spec:
         tier:
     spec:
       containers:
-      - name:
-        image:
+        - name:
+          image:
